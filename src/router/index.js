@@ -84,15 +84,28 @@ export const constantRoutes = [
     ]
   },
   {
-    path: '/',
+    path: '/3DMap',
     component: Layout,
-    redirect: '/dashboard',
+    redirect: '/3DMap',
     children: [
       {
-        path: 'dashboard',
-        component: () => import('@/views/dashboard/index'),
+        path: '3DMap',
+        component: () => import('@/views/map/3DMap'),
         name: 'Dashboard',
-        meta: { title: 'Dashboard', icon: 'dashboard', affix: true }
+        meta: { title: '3DMap', icon: 'guide', affix: true }
+      }
+    ]
+  },
+  {
+    path: '/3DIndoorMap',
+    component: Layout,
+    redirect: '/3DIndoorMap',
+    children: [
+      {
+        path: '3DMap',
+        component: () => import('@/views/map/3DIndoorMap'),
+        name: 'Dashboard',
+        meta: { title: '3D室内地图', icon: 'guide', affix: true }
       }
     ]
   },
