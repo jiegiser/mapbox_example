@@ -3,19 +3,16 @@
  * @Author: jiegiser
  * @Date: 2020-03-26 08:37:15
  * @LastEditors: jiegiser
- * @LastEditTime: 2020-03-26 08:55:44
+ * @LastEditTime: 2020-03-26 14:59:32
  -->
 <template>
   <div id="mapCon" />
 </template>
 
 <script>
-import mapboxgl from 'mapbox-gl'
+import mapboxgl from '../mapbox'
 export default {
-  name: 'HelloWorld',
-  created() {
-    mapboxgl.accessToken = 'pk.eyJ1IjoiamllZ2lzZXJnZyIsImEiOiJjanExcmJjMTYxMGlxM3hueG9lZjQ4eng5In0.F4Ia4OCMj8HZV8scGQvSfQ'
-  },
+  name: '3DMap',
   mounted() {
     const map = new mapboxgl.Map({
       container: 'mapCon',

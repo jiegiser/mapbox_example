@@ -18,6 +18,6 @@ selenium-debug.log
 *.njsproj
 *.sln
 *.local
-
+src/views/mapbox.js
 package-lock.json
 yarn.lock

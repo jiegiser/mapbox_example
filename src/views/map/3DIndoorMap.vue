@@ -3,20 +3,17 @@
  * @Author: jiegiser
  * @Date: 2020-03-26 09:00:19
  * @LastEditors: jiegiser
- * @LastEditTime: 2020-03-26 09:13:16
+ * @LastEditTime: 2020-03-26 14:59:25
  -->
 <template>
   <div id="mapCon" />
 </template>
 
 <script>
-import mapboxgl from 'mapbox-gl'
+import mapboxgl from '../mapbox'
 import indoor from '@/assets/indoor-3d-map.json'
 export default {
-  name: 'HelloWorld',
-  created() {
-    mapboxgl.accessToken = 'pk.eyJ1IjoiamllZ2lzZXJnZyIsImEiOiJjanExcmJjMTYxMGlxM3hueG9lZjQ4eng5In0.F4Ia4OCMj8HZV8scGQvSfQ'
-  },
+  name: '3DIndoorMap',
   mounted() {
     const map = new mapboxgl.Map({
       container: 'mapCon',

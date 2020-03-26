@@ -110,6 +110,45 @@ export const constantRoutes = [
     ]
   },
   {
+    path: '/WMSMap',
+    component: Layout,
+    redirect: '/WMSMap',
+    children: [
+      {
+        path: 'WMSMap',
+        component: () => import('@/views/map/WMSMap'),
+        name: 'Dashboard',
+        meta: { title: '加载WMS服务', icon: 'guide', affix: true }
+      }
+    ]
+  },
+  {
+    path: '/SetMapBackground',
+    component: Layout,
+    redirect: '/SetMapBackground',
+    children: [
+      {
+        path: 'SetMapBackground',
+        component: () => import('@/views/map/SetMapBackground'),
+        name: 'Dashboard',
+        meta: { title: '设置地图背景', icon: 'guide', affix: true }
+      }
+    ]
+  },
+  {
+    path: '/WFSMap',
+    component: Layout,
+    redirect: '/WFSMap',
+    children: [
+      {
+        path: 'WFSMap',
+        component: () => import('@/views/map/WFSMap'),
+        name: 'Dashboard',
+        meta: { title: '加载WFS数据', icon: 'guide', affix: true }
+      }
+    ]
+  },
+  {
     path: '/documentation',
     component: Layout,
     children: [
